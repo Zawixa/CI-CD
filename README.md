@@ -2,7 +2,7 @@
 
 Le projet a pour objectif de moderniser une application web et de la déployer rapidement avec une Pipline.
 
-**Prérequis : **
+**Prérequis :**
 Compte GitHub
 Compte Microsoft Azure
 Python 3.x
