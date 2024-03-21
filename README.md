@@ -19,5 +19,7 @@ Mise en place de la pipeline CI/CD
 Le fichier .github/workflows/azure-webapps-python.yml contient la configuration de la pipeline CI/CD. Pour l'adapter à un autre contexte, suivez ces étapes :
 
 Modifiez les secrets : Configurez vos variables d'environnement AZURE_WEBAPP_PUBLISH_PROFILE dans les secrets de GitHub pour qu'ils correspondent à votre Azure Web App.
+
 Modifier les variables : Adapter les différentes variables du codes comme AZURE_WEBAPP_NAME ou PYTHON_VERSION afin qu'ils correspondent à votre environnement.
+
 Personnalisez le workflow : Adaptez les étapes de build, test, et déploiement selon les besoins de votre application et de votre environnement de production.
