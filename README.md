@@ -1,29 +1,57 @@
 # CI-CD
 
-Le projet a pour objectif de moderniser une application web et de la déployer rapidement avec une Pipline.
+Ce modèle comprend des sections pour une introduction, des prérequis, l'installation et la configuration de l'environnement de développement, l'exécution de tests, le déploiement, et les contributions. Vous pouvez ajuster ce modèle selon les besoins spécifiques de votre projet.
 
-**Prérequis :**
+# Pipeline de CI/CD pour une Application Flask
 
-Compte GitHub
-Compte Microsoft Azure
-Python 3.x
+Ce projet illustre la mise en place d'une pipeline de CI/CD pour une application Flask simple, visant à afficher des recettes de cuisine. Le but est d'adopter les bonnes pratiques DevOps, notamment l'utilisation d'un dépôt Git, la mise en place de tests unitaires, et le déploiement automatique sur Azure Web App à travers GitHub Actions.
 
-**Configuration du projet :**
+## Prérequis
 
-Créer un dépôt git sur GitHub : Clonez ce dépôt pour démarrer votre propre projet.
+- [Git](https://git-scm.com/downloads)
+- [Python 3](https://www.python.org/downloads/)
+- Compte sur [GitHub](https://github.com/)
+- Compte sur [Azure](https://azure.microsoft.com/)
 
-Initialisez votre projet Flask : Utilisez le code fourni pour mettre en place l'application Flask.
+## Installation et Configuration
 
-Configurez une Azure Web App : Créez une Web App sur Azure pour le déploiement de l'application.
+### Clonage du dépôt
 
-Récupérez votre Azure Profile : Assurez-vous d'avoir vos credentials Azure pour configurer les secrets dans GitHub Actions.
 
-Mise en place de la pipeline CI/CD
+git clone <lien_du_dépôt>
+cd <nom_du_dossier>
 
-Le fichier .github/workflows/azure-webapps-python.yml contient la configuration de la pipeline CI/CD. Pour l'adapter à un autre contexte, suivez ces étapes :
+### Configuration de l'environnement de développement
 
-Modifiez les secrets : Configurez vos variables d'environnement AZURE_WEBAPP_PUBLISH_PROFILE dans les secrets de GitHub pour qu'ils correspondent à votre Azure Web App.
+1. Créez un environnement virtuel et activez-le :
 
-Modifier les variables : Adapter les différentes variables du codes comme AZURE_WEBAPP_NAME ou PYTHON_VERSION afin qu'ils correspondent à votre environnement.
 
-Personnalisez le workflow : Adaptez les étapes de build, test, et déploiement selon les besoins de votre application et de votre environnement de production.
+    python3 -m venv venv
+    source venv/bin/activate
+  
+
+2. Installez les dépendances :
+
+
+    pip install -r requirements.txt
+  
+
+### Exécution des Tests
+
+Exécutez les tests unitaires pour vous assurer que l'application fonctionne correctement :
+
+
+python -m pytest -v
+
+
+### Lancement de l'application en local
+
+Pour exécuter l'application localement :
+
+
+python app.py
+
+
+## Déploiement
+
+Le déploiement sur Azure Web App se fait automatiquement via la pipeline CI/CD configurée dans GitHub Actions à chaque push sur la branche principale. Assurez-vous de configurer vos secrets Azure dans GitHub pour permettre le déploiement.
