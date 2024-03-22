@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "LOL c'est nul!"
+    return "LOL c'est nul v2!"
 
 @app.route("/new-deployment")
 def new_deployment():
